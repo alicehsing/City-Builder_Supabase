@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <title>City Builder</title>
+</head>
+
+<body>
+    <header>Welcome to City Builder! This is the city of &nbsp&nbsp<span class="city-name"></span>
+    </header> 
+    <button id="logout">Logout</button>
+    <main>
+        <div class="dropdown-selection">
+            <label>
+                Waterfront &nbsp &nbsp
+                <select id="waterfront-dropdown">
+                    <option value="1">Sunrise Boat</option>
+                    <option value="2">Jetty Lake</option>
+                    <option value="3">Mountain Snowy Lake</option>
+                </select>
+            </label>
+            <label>
+                Skyline &nbsp &nbsp
+                <select id="skyline-dropdown">
+                    <option value="1">Day</option>
+                    <option value="2">Sunrise</option>
+                    <option value="3">Night</option>
+                </select>
+            </label>
+            <label>
+                Castle &nbsp &nbsp
+                <select id="castle-dropdown">
+                    <option value="1">Loire Valley Chambord</option>
+                    <option value="2">Himeji Castle</option>
+                    <option value="3">Summer Lake Castle</option>
+                </select>
+            </label>    
+        </div>
+        <section class="images">
+            <div class="waterfront">
+                <img class="water-img">
+            </div>
+            <div class="skyline">
+                <img class="skyline-img">
+            </div>
+            <div class="castle">
+                <img class="castle-img">
+            </div>
+        </section>
+
+        <section class="inputs-and-display">
+            <form class="name-form">
+                <input name="name" placeholder="Name Your City">
+                <button>Add City</button>
+            </form>
+            <form class="slogan-form">
+                <input name="slogan" placeholder="Enter Your City's Slogan">
+                <button>Add Slogan</button>
+            </form>
+            <div class="display-box">
+                <h3>City Slogans:</h3>
+                <div class="slogan-list" style="overflow-y:scroll"></div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+    </footer>
+    <script type="module" src="./city.js"></script>
+</body>
+
+</html>
