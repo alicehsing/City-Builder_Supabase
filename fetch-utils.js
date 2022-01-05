@@ -31,9 +31,9 @@ export async function createDefaultCity() {
                 castle_id: '1',
                 slogans: ['Everyone has a fairyland of his/her/their own!']
             }
-        
         ])
         .single();
+        
     return checkError(response);
 }
 
@@ -49,12 +49,12 @@ export async function updateName(newName) {
         //and only do this to one thing. Do not return an array
         .single();
     //return the updated city
-    return checkAuth(response);
-
+    return checkError(response);
 }
 
 export async function updateWaterfront(newWaterfront) {
     const user = await getUser();
+     //update the water_id column for this city in the database 
     const response = await client
         .from('cities')
         .update({ waterfront_id: newWaterfront })

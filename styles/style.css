@@ -19,7 +19,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: #fdfffc;
 }
 
 main {
@@ -78,7 +78,7 @@ header img {
 }
 
 p {
-    margin: var(--gutter);
+    margin: none;
 }
   
 footer {
@@ -166,7 +166,7 @@ label {
 
 .city-name {
     margin: 10px;
-    width: 150px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,6 +194,7 @@ label {
     background:whitesmoke;
     border-radius: 10px;
     margin: 10px; 
+    width: 400px;
 }
 
 .slogan-list {
@@ -201,7 +202,7 @@ label {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 390px;
     height: 200px;
     margin: 10px;
     font-family: 'Pacifico', cursive;

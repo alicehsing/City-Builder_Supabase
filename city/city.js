@@ -31,18 +31,30 @@ logoutButton.addEventListener('click', () => {
     logout();
 });
 
+//water dropdown
 waterfrontDropdown.addEventListener('change', async() => {
+    //update the water_id column for this city in the database 
     const updatedCity = await updateWaterfront(waterfrontDropdown.value);
+    //fresh fetch
+    //display the water picture correctly
     displayCity(updatedCity);
 });
 
+// skyline dropdown
 skylineDropdown.addEventListener('change', async() => {
+    //update the skyline_id column for this city in the database 
     const updatedCity = await updateSkyline(skylineDropdown.value);
+    //fresh fetch
+    //display the skyline picture correctly
     displayCity(updatedCity);
 });
 
+//castle dropdown
 castleDropdown.addEventListener('change', async() => {
+    //update the castle_id column for this city in the database
     const updatedCity = await updateCastle(castleDropdown.value);
+    //fresh fetch
+    //display the castle picture correctly
     displayCity(updatedCity);
 });
 
@@ -94,7 +106,6 @@ sloganForm.addEventListener('submit', async(e) => {
     displayCity(updatedCity);
 });
 
-
 function displayCity(city) {
     //change textContent of city name span to the city name
     cityNameEl.textContent = city.name;
@@ -110,19 +121,4 @@ function displayCity(city) {
         sloganEl.textContent = slogan;
         sloganListEl.append(sloganEl);
     }
-    
 }
-
-
-// - water dropdown
-//     - update the water_id column for this city in the database 
-//     - fresh fetch
-//     - display the water picture correctly
-// - skyline dropdown
-//     - update the skyline_id column for this city in the database 
-//     - fresh fetch
-//     - display the skyline picture correctly
-// - castle dropdown
-//     - update the castle_id column for this city in the database 
-//     - fresh fetch
-//     - display the castle picture correctly
